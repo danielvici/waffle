@@ -37,10 +37,6 @@ services:
 > You can find a more detailed introduction in the [Docs]()
 
 
-## Customaization
-
-See [Docs]() for more information. 
-
 ## Credits & License
 
 Waffle is based on [Mafl](https://github.com/hywax/mafl) by [Hywax](https://github.com/hywax)
