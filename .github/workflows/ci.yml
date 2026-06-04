@@ -26,19 +26,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Node
-        uses: actions/setup-node@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 20
+          bun-version: latest
 
       - name: Install dependencies
-        run: yarn install
+        run: bun install
 
       - name: ESLint
-        run: yarn run lint
+        run: bun run lint
 
       - name: Types
-        run: yarn run typecheck
+        run: bun run typecheck
 
       - name: Build
-        run: yarn run build
+        run: bun run build

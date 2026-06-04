@@ -7,7 +7,7 @@ on:
 
 jobs:
   push_to_registries:
-    name: Push Docker image to multiple registries
+    name: Push Docker image to GHCR
     runs-on: ubuntu-latest
     permissions:
       packages: write
@@ -22,12 +22,6 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
       - name: Log in to GHCR
         uses: docker/login-action@v3
         with:
@@ -39,17 +33,17 @@ jobs:
         id: meta
         run: |
           version_tag="${{github.ref_name}}"
-          tags=($version_tag)
+          # Remove 'v' prefix for image tagging if present
+          CLEAN_TAG=$(echo $version_tag | sed 's/^v//')
+          
+          TAGS="ghcr.io/${{ github.repository_owner }}/waffle:${CLEAN_TAG}"
+          
           if [[ "$version_tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-            # prerelease tags like `v2.0.0-alpha.1` should not be released as `latest` nor `v2`
-            tags+=("latest")
-            tags+=($(echo "$version_tag" | cut -d. -f1))
+            TAGS="${TAGS},ghcr.io/${{ github.repository_owner }}/waffle:latest"
+            TAGS="${TAGS},ghcr.io/${{ github.repository_owner }}/waffle:$(echo $CLEAN_TAG | cut -d. -f1)"
           fi
-          releases=""
-          for tag in "${tags[@]}"; do
-            releases="${releases:+$releases,}${{ secrets.DOCKERHUB_USERNAME }}/mafl:$tag,ghcr.io/${{ secrets.DOCKERHUB_USERNAME }}/mafl:$tag"
-          done
-          echo "releases=$releases" >> "$GITHUB_OUTPUT"
+          
+          echo "tags=${TAGS}" >> "$GITHUB_OUTPUT"
 
       - name: Build and push Docker images
         uses: docker/build-push-action@v6
@@ -57,4 +51,4 @@ jobs:
           context: .
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: ${{ steps.meta.outputs.releases }}
+          tags: ${{ steps.meta.outputs.tags }}
