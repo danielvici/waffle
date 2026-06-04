@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import en from './locales/en'
 
 export default defineConfig({
+  base: '/waffle/',
   title: 'Waffle',
   head: [
     ['link', { rel: 'icon', href: '/waffle_logo_round.ico' }],

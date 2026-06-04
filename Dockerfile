@@ -14,8 +14,8 @@ FROM oven/bun:alpine
 
 LABEL org.opencontainers.image.title="Waffle" \
       org.opencontainers.image.description="Minimalistic flexible homepage" \
-      org.opencontainers.image.url="https://github.com/danielvici/waffl" \
-      org.opencontainers.image.documentation="https://github.com/danielvici/waffl" \
+      org.opencontainers.image.url="https://danielvici.github.io/waffle/" \
+      org.opencontainers.image.documentation="https://danielvici.github.io/waffle/" \
       org.opencontainers.image.source="https://github.com/danielvici/waffle" \
       org.opencontainers.image.authors="danielvici123 <daniel@danielvici.com>" \
       org.opencontainers.image.licenses="MIT"

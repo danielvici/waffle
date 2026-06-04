@@ -28,10 +28,10 @@ export default defineNuxtConfig({
     manifest: {
       id: '/',
       scope: '/',
-      name: 'Mafl. Minimalistic flexible homepage.',
-      short_name: 'Mafl',
-      description: 'Mafl is an intuitive service for organizing your homepage. Customize Mafl to your individual needs and work even more efficiently!',
-      theme_color: '#609966',
+      name: 'Waffle',
+      short_name: 'Waffle',
+      description: 'All your self-hosted apps on one plate. Tasty as you love it. A dashboard that just works.',
+      theme_color: '#c48a3c',
       icons: [
         {
           sizes: '192x192',

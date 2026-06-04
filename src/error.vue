@@ -21,7 +21,7 @@
           </p>
 
           <p class="text-center mt-2">
-            <a href="https://mafl.hywax.space/" class="text-brand-600 hover:text-brand-800 transition-all">{{ $t('error.action') }} →</a>
+            <a href="https://danielvici.github.io/waffle/" class="text-brand-600 hover:text-brand-800 transition-all">{{ $t('error.action') }} →</a>
           </p>
           <pre v-if="error?.message" class="mt-6 bg-fg/5 dark:bg-fg/10 text-fg-dimmed px-3 py-2 rounded-2xl border border-fg/10 dark:border-fg/15 max-h-52 overflow-auto"><code>{{ error.message }}</code></pre>
         </template>

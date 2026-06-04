@@ -5,9 +5,9 @@
       "categories": [
         "Dashboard"
       ],
-      "description": "Waffle is a lightweight and easy to use Homepage. The Goal is to keep a Homepage as simple as possible AND to be highly customizible!",
-      "image": "danielvici/waffle:latest",
-      "logo": "https://mafl.hywax.space/logotype.svg", // TODO: Change it
+      "description": "All your self-hosted apps on one plate. Tasty as you love it. A dashboard that just works.",
+      "image": "ghcr.io/danielvici/waffle:latest",
+      "logo": "https://raw.githubusercontent.com/danielvici/waffle/main/waffle_logo_round.svg",
       "name": "Waffle",
       "platform": "linux",
       "ports": [
