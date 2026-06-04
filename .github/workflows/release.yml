@@ -16,9 +16,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -33,7 +30,6 @@ jobs:
         id: meta
         run: |
           version_tag="${{github.ref_name}}"
-          # Remove 'v' prefix for image tagging if present
           CLEAN_TAG=$(echo $version_tag | sed 's/^v//')
           
           TAGS="ghcr.io/${{ github.repository_owner }}/waffle:${CLEAN_TAG}"
@@ -50,5 +46,7 @@ jobs:
         with:
           context: .
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           tags: ${{ steps.meta.outputs.tags }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
