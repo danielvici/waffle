@@ -3,11 +3,11 @@
 <preview-image name="services/base" />
 
 The main card of the service.
-Other services are created on the basis of this service.
+Other services are based on this service.
 
 ## Title
 
-Title service
+Service Title
 
 ```yaml
 title: Home Assistant
@@ -102,7 +102,7 @@ See [tags](../reference/tags.md) for details.
 
 ## Status
 
-Mafl knows how to check the health of the services in the link you provided.
+Waffle checks the health of your service at the specified interval using the `url`. If no `url` provided it uses the `link` instead. 
 
 ```yaml
 status:

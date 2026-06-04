@@ -15,9 +15,6 @@ export default {
       enabled: import.meta.env.MODE === 'production',
       counter: {
         id: 96086220,
-        initParams: {
-          trustedDomains: ['mafl.hywax.space'],
-        },
       },
     })
   },

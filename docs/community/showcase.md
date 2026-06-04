@@ -2,10 +2,10 @@
 
 ## Add your example
 
-To add your example, create an issue on github. Fill in all the fields and then expect to be added.
+To add your example, create an issue on GitHub. Fill in all the fields and then expect to be added.
 For other users it will be very useful if you share your `config.yml` (removing `secrets` beforehand).
 
-[Send your example](https://github.com/hywax/mafl/issues/new?assignees=&labels=showcase&projects=&template=showcase.yml&title=%5BSHOWCASE%5D+%3Ctitle%3E)
+[Send your example](https://github.com/danielvici/waffle/issues/new?assignees=&labels=showcase&projects=&template=showcase.yml&title=%5BSHOWCASE%5D+%3Ctitle%3E)
 
 ## splnut
 

@@ -11,8 +11,8 @@ url: icons/example.svg
 ```
 
 ::: info
-For an internal link, you need to add a folder to the docker container. More details are written in
-[getting started](../guide/getting-started.md).
+For an internal link, you need to add a folder to the Docker container. More details are written in
+[getting started](../introduction/getting-started.md).
 :::
 
 ## Name
@@ -94,5 +94,5 @@ services:
     description: Home automation
     link: https://home-assistant.home.local/
     icon:
-      url: https://mafl.hywax.space/logotype.svg
+      url: https://raw.githubusercontent.com/danielvici/waffle/main/waffle_logo_round.svg
 ```

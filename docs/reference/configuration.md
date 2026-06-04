@@ -1,7 +1,7 @@
 # Configuration
 
 Services, icons, language and other settings are set in a single `config.yml` file.
-It must be transferred to the docker container, as described in [Getting Started](../guide/getting-started.md).
+It must be transferred to the Docker container, as described in [Getting Started](../introduction/getting-started.md).
 
 ## Title
 
@@ -11,7 +11,7 @@ You can customize the page header if you wish.
 title: My Home Page
 ```
 
-Default: `Mafl Home Page`
+Default: `Waffle Home Page`
 
 ## Language
 
@@ -126,7 +126,7 @@ It supports both list and grouping. The number of services is not limited.
 
 ::: warning Services list
 A full list of all services can be viewed in the left sidebar under **Services**.
-We recommend to start familiarization with [base service](../services/base.md), on which all other services are based.
+We recommend starting familiarization with [base service](../services/base.md), on which all other services are based.
 :::
 
 ### Flat

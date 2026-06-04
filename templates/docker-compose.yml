@@ -1,10 +1,9 @@
-version: '3.8'
-
 services:
-  mafl:
-    image: hywax/mafl
+  waffle:
+    image: danielvici/waffle
     restart: unless-stopped
+    container_name: Waffle
     ports:
       - '3000:3000'
     volumes:
-      - ./config.yml:/app/data/config.yml
+      - ./config.yml:/app/data/config.yml # <path to your config>:<docker-path> (dont change the docker path)

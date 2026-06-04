@@ -1,11 +1,10 @@
 import { defineConfig } from 'vitepress'
 import en from './locales/en'
-import ru from './locales/ru'
 
 export default defineConfig({
-  title: 'Mafl',
+  title: 'Waffle',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/waffle_logo_round.ico' }],
   ],
   themeConfig: {
     search: {
@@ -13,14 +12,22 @@ export default defineConfig({
     },
 
     logo: {
-      src: '/logotype.svg',
+      src: '/waffle_logo_round.svg',
       innerWidth: 50,
       height: 50,
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/hywax/mafl' },
+      { icon: 'github', link: 'https://github.com/danielvici/waffle' },
     ],
+
+    lastUpdated: {
+      text: 'Updated at',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      }
+    }
   },
 
   ignoreDeadLinks: [
@@ -31,6 +38,5 @@ export default defineConfig({
 
   locales: {
     root: { label: 'English', ...en },
-    ru: { label: 'Русский', ...ru },
   },
 })

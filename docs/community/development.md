@@ -124,7 +124,7 @@ html.new-theme {
 ```typescript [types/config.d.ts]
 export interface Config {
   title?: string
-  lang: 'en' | 'ru'
+  lang: 'en'
   theme?: 'system' | 'light' | 'dark' | 'deep' | 'new-theme' // [!code focus]
   services: ServicesGroup[]
   checkUpdates: boolean
@@ -145,7 +145,7 @@ To do this, find the theme section in all translations and add the new-theme par
 
 #### 1. Creating a new language file
 
-Create a new file in the `locales` folder. We recommend to copy `locales/en-US.json` and make translation based on it.
+Create a new file in the `locales` folder. We recommend copying `locales/en-US.json` and making a translation based on it.
 
 #### 2. File connection
 
@@ -175,10 +175,10 @@ To do this, find the language section in all translations and add a new paramete
 * `docs/reference/configuration.md`
 * `docs/{lang}/reference/configuration.md`
 
-## Updating dependencies
+<!--## Updating dependencies
 
 This is not necessary. The project has [Dependabot](https://github.com/dependabot), which scans for new dependencies once a week.
-But if you still have such a need, run the `yarn upgrade` command. After that, check everything that
-has been updated.
+But if you still have such a need, run the `bun update` command. After that, check everything that
+has been updated.-->
 
 Once you are sure that the application works, create a new `pull request`.

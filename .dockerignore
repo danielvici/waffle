@@ -2,3 +2,5 @@ node_modules
 .output
 .nuxt
 README.md
+bun.lock
+bun.lockb

@@ -5,16 +5,16 @@
       "categories": [
         "Dashboard"
       ],
-      "description": "Mafl is an intuitive service for organizing your homepage. Customize Mafl to your individual needs and work even more efficiently!",
-      "image": "hywax/mafl:latest",
-      "logo": "https://mafl.hywax.space/logotype.svg",
-      "name": "Mafl",
+      "description": "Waffle is a lightweight and easy to use Homepage. The Goal is to keep a Homepage as simple as possible AND to be highly customizible!",
+      "image": "danielvici/waffle:latest",
+      "logo": "https://mafl.hywax.space/logotype.svg", // TODO: Change it
+      "name": "Waffle",
       "platform": "linux",
       "ports": [
         "3000:3000/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "title": "Mafl",
+      "title": "Waffle",
       "type": 1,
       "volumes": [
         {

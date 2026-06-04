@@ -22,8 +22,8 @@ Mount the new volume with the icons folder in your `docker-compose.yml` or pass 
 version: '3.8'
 
 services:
-  mafl:
-    image: hywax/mafl
+  waffle:
+    image: ghcr.io/danielvici/waffle
     restart: unless-stopped
     ports:
       - '3000:3000'

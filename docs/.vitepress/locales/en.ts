@@ -20,16 +20,18 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Guide',
-        base: '/guide',
+        text: 'Introduction',
+        collapsed: false,
+        base: '/introduction',
         items: [
-          { text: 'What is Mafl?', link: '/what-is' },
+          { text: 'What is Waffle?', link: '/what-is' },
           { text: 'Getting Started', link: '/getting-started' },
           // { text: 'Deployment', link: '/deployment' },
         ],
       },
       {
         text: 'Reference',
+        collapsed: false,
         base: '/reference',
         items: [
           { text: 'Configuration', link: '/configuration' },
@@ -40,6 +42,7 @@ export default defineConfig({
       },
       {
         text: 'Services',
+        collapsed: false,
         base: '/services',
         items: [
           { text: 'Base', link: '/base' },
@@ -49,6 +52,7 @@ export default defineConfig({
       },
       {
         text: 'Community',
+        collapsed: false,
         base: '/community',
         collapsed: true,
         items: [
@@ -59,6 +63,7 @@ export default defineConfig({
       },
       {
         text: 'Other',
+        collapsed: false,
         base: '/other',
         collapsed: true,
         items: [
@@ -69,7 +74,7 @@ export default defineConfig({
     ],
 
     editLink: {
-      pattern: 'https://github.com/hywax/mafl/edit/main/docs/:path',
+      pattern: 'https://github.com/danielvici/waffle/edit/main/docs/:path',
       text: 'Edit this page on GitHub',
     },
 

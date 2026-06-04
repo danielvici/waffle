@@ -1,10 +1,11 @@
-version: '3.8'
-
 services:
-  mafl:
-    image: hywax/mafl
+  waffle:
+    image: ghcr.io/danielvici/waffle
     restart: unless-stopped
+    container_name: Waffle
     ports:
-      - '3000:3000'
+      - "3000:3000"
     volumes:
       - ./config.yml:/app/data/config.yml
+      # - /icons:/app/public/icons # Uncomment if you want to use your own icons.
+      # - /favicons:/app/public/favicons # See Favicons for more information

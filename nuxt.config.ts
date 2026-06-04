@@ -136,6 +136,7 @@ export default defineNuxtConfig({
       },
     ],
     strategy: 'no_prefix',
+    restructureDir: 'src',
     langDir: 'locales',
     defaultLocale: 'en',
   },

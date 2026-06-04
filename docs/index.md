@@ -2,19 +2,19 @@
 layout: home
 
 hero:
-  name: "Mafl"
-  text: "Home Page"
-  tagline: Intuitive service for organizing your homepage
+  name: "Waffle"
+  text: "The tasty Home Page"
+  tagline: The sweet spot for your setup
   actions:
     - theme: brand
       text: Getting started
-      link: /guide/getting-started
+      link: /introduction/getting-started
     - theme: alt
-      text: What is Mafl?
-      link: /guide/what-is
+      text: What is Waffle?
+      link: /introduction/what-is
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/hywax/mafl
+      text: GitHub
+      link: https://github.com/danielvici/waffle
 
 features:
   - title: Privacy
@@ -46,7 +46,7 @@ features:
     details: Optimized docker images for popular platforms.
   - title: Free
     icon: ✨
-    details: Mafl is completely free and open source.
+    details: Waffle is completely free and open source.
   - title: PWA
     icon: 📲
     details: Installable application.
