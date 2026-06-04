@@ -12,9 +12,7 @@ const { locale } = useI18n()
 
 locale.value = $settings.lang
 
-const i18nHead = useLocaleHead({
-  identifierAttribute: 'id',
-})
+const i18nHead = useLocaleHead({})
 
 useHead({
   title: $settings.title,
