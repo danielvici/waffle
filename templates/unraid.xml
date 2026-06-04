@@ -12,10 +12,10 @@
         <TagDescription>Stable releases from GitHub</TagDescription>
     </Branch>
     <Project>https://github.com/danielvici/waffle/</Project>
-    <Overview>Waffle is a lightweight and easy to use Homepage. The Goal is to keep a Homepage as simple as possible AND to be highly customizible!</Overview>
+    <Overview>All your self-hosted apps on one plate. Tasty as you love it. A dashboard that just works.</Overview>
     <WebUI>http://[IP]:[PORT:3000]</WebUI>
     <TemplateURL>false</TemplateURL>
-    <Icon>https://mafl.hywax.space/logotype.svg</Icon> <!--TODO: CHANGE IT -->
+    <Icon>https://raw.githubusercontent.com/danielvici/waffle/main/waffle_logo_round.svg</Icon>
     <Config Name="WebUI Port" Target="3000" Default="3000" Mode="tcp" Description="Web UI Port" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
     <Config Name="Config" Target="/app/data/config.yml" Default="/mnt/user/appdata/waffle/config.yaml" Mode="ro" Description="" Type="Path" Display="always" Required="true" Mask="false"/>
     <Config Name="Local Icons" Target="/app/public/favicons" Default="/mnt/user/appdata/waffle/favicons" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
