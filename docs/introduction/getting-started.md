@@ -31,7 +31,7 @@ services:
 :::
 
 ::: tip 
-If you want the file directly get it [here](https://github.com/danielvici/waffle/blob/72550e8067e62c36e4af94872d58ad84b235d4b1/.example/docker-compose.yml).
+If you want the file directly get it [here](https://github.com/danielvici/waffle/blob/main/.example/docker-compose.yml).
 :::
 
 ### Config File
@@ -94,6 +94,10 @@ services:
         name: mdi:nas
         wrap: true
 ```
+:::
+
+::: tip 
+If you want the file directly get it [here](https://github.com/danielvici/waffle/blob/main/.example/config.yml).
 :::
 
 Place your `config.yml` in the same folder as your `docker-compose.yml`
