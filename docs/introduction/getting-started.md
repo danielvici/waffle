@@ -96,6 +96,10 @@ services:
 ```
 :::
 
+::: tip 
+If you want the file directly get it [here](https://github.com/danielvici/waffle/blob/main/.example/config.yml).
+:::
+
 Place your `config.yml` in the same folder as your `docker-compose.yml`
 
 ### Run Container
