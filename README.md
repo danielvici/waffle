@@ -38,7 +38,7 @@ services:
       - ./config.yml:/app/data/config.yml
       # - ./icons:/app/public/icons # Uncomment for custom icons
       # - ./favicons:/app/public/favicons # See docs for favicons
-````
+```
 
 > [!NOTE]
 > Check full setup guide in the [Docs](https://danielvici.github.io/waffle/introduction/getting-started.html).
