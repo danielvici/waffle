@@ -5,7 +5,7 @@ export default defineConfig({
   base: '/waffle/',
   title: 'Waffle',
   head: [
-    ['link', { rel: 'icon', href: '/waffle_logo_round.ico' }],
+    ['link', { rel: 'icon', href: '/waffle/favicon.ico' }],
   ],
   themeConfig: {
     search: {
@@ -26,9 +26,9 @@ export default defineConfig({
       text: 'Updated at',
       formatOptions: {
         dateStyle: 'full',
-        timeStyle: 'medium'
-      }
-    }
+        timeStyle: 'medium',
+      },
+    },
   },
 
   ignoreDeadLinks: [
