@@ -6,13 +6,12 @@ outline: [2,4]
 
 Welcome! First of all thanks for choosing [Waffle](/) as your Homepage. Here you will learn how to install Waffle and create your first service
 
-
 ## Installation
 
-To run it I will use Docker Compose. It's the easiest way to get Waffle. 
+To run it I will use Docker Compose. It's the easiest way to get Waffle.
 
-### Docker Compose 
-I recommend using this `docker-compose.yml`: 
+### Docker Compose
+I recommend using this `docker-compose.yml`:
 
 ::: code-group
 ```yaml [docker-compose.yml]
@@ -30,7 +29,7 @@ services:
 ```
 :::
 
-::: tip 
+::: tip
 If you want the file directly get it [here](https://github.com/danielvici/waffle/blob/main/.example/docker-compose.yml).
 :::
 
@@ -96,7 +95,7 @@ services:
 ```
 :::
 
-::: tip 
+::: tip
 If you want the file directly get it [here](https://github.com/danielvici/waffle/blob/main/.example/config.yml).
 :::
 
@@ -124,15 +123,14 @@ docker compose up -d
 
 Great! Your Homepage is now ready to use!
 
-Access it via `http://<your-machine-ip>:3000`.  
+Access it via `http://<your-machine-ip>:3000`.
 
 The site should look like this (if you chose to use the example `config.yml`):
 
 ![Example Homepage](../public/example_homepage.png)
 
+Enjoy using Waffle!
 
-Enjoy using Waffle! 
-
-::: tip 
+::: tip
 Want to learn more how to customize your Homepage? [Learn more](/reference/configuration)
 :::
