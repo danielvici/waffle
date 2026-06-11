@@ -24,7 +24,6 @@
 * chore: finalize Waffle branding and documentation migration by @danielvici in https://github.com/danielvici/waffle/pull/2
 * fix: Replace incorrect favicons by @danielvici in https://github.com/danielvici/waffle/pull/3
 
-
 **Full Changelog**: https://github.com/danielvici/waffle/compare/v0.2.0...v0.2.1
 
 ---
