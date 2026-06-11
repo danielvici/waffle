@@ -1,5 +1,34 @@
 # Changelog
 
+## v0.2.3
+
+### What's Changed
+* fix: icon serving from icons directory by @danielvici in https://github.com/danielvici/waffle/pull/5
+
+**Full Changelog**: https://github.com/danielvici/waffle/compare/v0.2.2...v0.2.3
+
+---
+
+## v0.2.2
+
+### What's Changed
+* chore: cleanup, branding and docs by @danielvici in https://github.com/danielvici/waffle/pull/4
+
+**Full Changelog**: https://github.com/danielvici/waffle/compare/v0.2.1...v0.2.2
+
+---
+
+## v0.2.1
+
+### What's Changed
+* chore: finalize Waffle branding and documentation migration by @danielvici in https://github.com/danielvici/waffle/pull/2
+* fix: Replace incorrect favicons by @danielvici in https://github.com/danielvici/waffle/pull/3
+
+
+**Full Changelog**: https://github.com/danielvici/waffle/compare/v0.2.0...v0.2.1
+
+---
+
 ## v0.2.0
 
 [compare changes](https://github.com/danielvici/waffle/compare/v0.15.4...v0.2.0)
