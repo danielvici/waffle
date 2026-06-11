@@ -102,7 +102,7 @@ See [tags](../reference/tags.md) for details.
 
 ## Status
 
-Waffle checks the health of your service at the specified interval using the `url`. If no `url` provided it uses the `link` instead. 
+Waffle checks the health of your service at the specified interval using the `url`. If no `url` provided it uses the `link` instead.
 
 ```yaml
 status:

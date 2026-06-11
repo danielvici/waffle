@@ -33,7 +33,7 @@ services:
     restart: unless-stopped
     container_name: Waffle
     ports:
-      - "3000:3000"
+      - '3000:3000'
     volumes:
       - ./config.yml:/app/data/config.yml
       # - ./icons:/app/public/icons # Uncomment for custom icons
