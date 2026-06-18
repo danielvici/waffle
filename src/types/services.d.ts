@@ -44,7 +44,10 @@ export interface ServiceWithDefaultData<S> {
   }
 }
 
-export type ReturnServiceWithData<D, S extends ServiceWithDefaultData<Service>['defaultData']> = S & { data: D }
+export type ReturnServiceWithData<
+  D,
+  S extends ServiceWithDefaultData<Service>['defaultData'],
+> = S & { data: D }
 
 export interface BaseService extends Service {}
 
@@ -72,5 +75,16 @@ export interface OpenWeatherMapService extends Service {
     place: string
     description: string
     iconId: number
+  }
+}
+
+export interface DateAndTimeService extends Service {
+  options?: {
+    timezone?: string
+    format?: string
+    interval?: number
+  }
+  server: {
+    timezone: string
   }
 }
