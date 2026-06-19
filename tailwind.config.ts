@@ -1,7 +1,10 @@
 import type { Config } from 'tailwindcss'
 
 export default <Partial<Config>>{
-  darkMode: 'class',
+  darkMode: ['selector', '.dark, .deep, .sepia, .bluer'],
+  corePlugins: {
+    sepia: false,
+  },
   safelist: [
     {
       pattern: /(bg|text)-./,

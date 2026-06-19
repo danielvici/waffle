@@ -26,6 +26,32 @@ useHead({
 })
 
 onMounted(() => {
-  colorMode.preference = $settings.theme || 'system'
+  const theme = ($settings.theme || 'system').toLowerCase()
+
+  colorMode.unknown = false
+  colorMode.preference = theme
+
+  if (theme !== 'system') {
+    const el = document.documentElement
+    const themes = ['light', 'dark', 'deep', 'sepia', 'bluer']
+    
+    // Force immediate correct state
+    themes.forEach(t => el.classList.remove(t))
+    el.classList.add(theme)
+    
+    // Aggressively prevent nuxt-color-mode or tailwind from ruining the class
+    const observer = new MutationObserver(() => {
+      if (!el.classList.contains(theme)) {
+        el.classList.add(theme)
+      }
+      themes.filter(t => t !== theme).forEach(t => {
+        if (el.classList.contains(t)) {
+          el.classList.remove(t)
+        }
+      })
+    })
+    
+    observer.observe(el, { attributes: true, attributeFilter: ['class'] })
+  }
 })
 </script>

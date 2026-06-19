@@ -16,6 +16,12 @@ services:
         name: simple-icons:adguard
         wrap: true
         color: '#68bc71'
+    - title: Date
+      type: date-and-time
+      options:
+        format: 'HH:mm, DD. dddd YYYY' #'HH:mm:ss, MMMM, DD.MM.YYYY'
+        timezone:		America/New_York
+      description: Hallo
 
   Cloud:
     - title: Traefik

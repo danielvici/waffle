@@ -32,6 +32,10 @@ function resolveByTypeComponent(type: string) {
     return resolveComponent('ServiceOpenWeatherMap')
   }
 
+  if (type === 'date-and-time') {
+    return resolveComponent('ServiceDateAndTime')
+  }
+
   return resolveComponent('ServiceBase')
 }
 

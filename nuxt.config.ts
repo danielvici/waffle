@@ -151,6 +151,10 @@ export default defineNuxtConfig({
       data: {
         driver: 'fs',
         base: './data',
+        watchOptions: {
+          usePolling: true,
+          interval: 1000,
+        },
       },
     },
     experimental: {
