@@ -48,6 +48,7 @@ export default defineConfig({
           { text: 'Base', link: '/base' },
           { text: 'IP API', link: '/ip-api' },
           { text: 'Weather', link: '/openweathermap' },
+          { text: 'Date and Time', link: '/date-and-time' },
         ],
       },
       {

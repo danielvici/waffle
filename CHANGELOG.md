@@ -1,5 +1,24 @@
 # Changelog
 
+## v0.3.0
+
+### Enhancements
+
+- **service:** Add date-and-time service widget with configurable timezone, format, and update interval ([176b1d6](https://github.com/danielvici/waffle/commit/176b1d6))
+
+### Bug Fixes
+
+- **theme:** Fix critical hydration race condition preventing the `light` theme from loading correctly.
+- **theme:** Disable Tailwind's built-in sepia filter to prevent washed-out colors on custom themes.
+- **config:** Improve live reload robustness by using filesystem polling and cleaning up WebSocket leaks.
+
+### Chore
+
+- **version:** Bump version to 0.3.0 ([413e2c4](https://github.com/danielvici/waffle/commit/413e2c4))
+- **update-check:** Point update checker to `danielvici/waffle` repository
+
+---
+
 ## v0.2.3
 
 ### What's Changed
