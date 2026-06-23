@@ -20,7 +20,7 @@ Waffle is a lightweight, clean dashboard for your homelab. It is a community-mai
 * **[Documentation](https://danielvici.github.io/waffle/)**
 * **[Getting Started](https://danielvici.github.io/waffle/introduction/getting-started.html)**
 * **[What is Waffle?](https://danielvici.github.io/waffle/introduction/what-is.html)**
-* **[Contact (@danielvici)](https://x.com/danielvici)**
+* **[Contact (@danielvici)](https://x.com/danielvici123)**
 
 ## Installation
 
