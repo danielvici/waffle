@@ -5,6 +5,7 @@ export const configSchema = z.object({
   title: z.string().optional(),
   lang: z.string().optional(),
   theme: z.string().optional(),
+  background: z.string().optional(),
   checkUpdates: z.boolean().optional(),
   tags: z.array(tagSchema).optional(),
   services: z.union([

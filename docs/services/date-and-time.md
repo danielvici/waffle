@@ -12,34 +12,34 @@ Format how to display the current Time and/or Date.
 
 ````yaml
 options:
-  format: "HH:mm"
+  format: 'HH:mm'
 ````
 
 Default: `"HH:mm:ss, dddd, DD.MM.YYYY"`
 
 To keep Waffle leightweight it tokens are inspired by the standard [Moment.js](https://momentjs.com/docs/#/displaying/format/) / Day.js conventions.
 ::: details Click to see supported Tokens
-  - **Year**: 
+  - **Year**:
     - `YYYY` (2026)
     - `YY` (26)
-  - **Month**: 
-    - `MMMM` (January) 
-    - `MMM` (Jan) 
+  - **Month**:
+    - `MMMM` (January)
+    - `MMM` (Jan)
     - `MM` (01-12)
     - `M` (1-12)
-  - **Day**: 
-    - `DD` (01-31) 
+  - **Day**:
+    - `DD` (01-31)
     - `D` (1-31)
-  - **Weekday**: 
+  - **Weekday**:
     - `dddd` (Monday)
     - `ddd` (Mon)
-  - **Time (24h)**: 
+  - **Time (24h)**:
     - `HH` (00-23)
     - `H` (0-23)
   - **Minute**:
     - `mm` (00-59)
     - `m` (0-59)
-  - **Second**: 
+  - **Second**:
     - `ss` (00-59)
     - `s` (0-59)
 :::
@@ -52,13 +52,13 @@ To keep Waffle leightweight it tokens are inspired by the standard [Moment.js](h
 
 ````yaml
 options:
-  timezone:  America/New_York
+  timezone: America/New_York
 ````
 
 Default: Your system's default timezone.
 
 ::: tip Note
-Waffle uses the [tz database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List) for valid timezone names (e.g., Europe/Berlin, Asia/Tokyo ). 
+Waffle uses the [tz database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List) for valid timezone names (e.g., Europe/Berlin, Asia/Tokyo ).
 :::
 
 :::info
@@ -71,22 +71,22 @@ You can overwrite the Time zone by using a [``description``](base#description)
 
 ::: code-group
 ```yaml [config.yml]
-    - title: Date
-      type: date-and-time
-      options:
-        format: 'HH:mm, DD. dddd YYYY'
-        timezone: Europe/Berlin
+- title: Date
+  type: date-and-time
+  options:
+    format: 'HH:mm, DD. dddd YYYY'
+    timezone: Europe/Berlin
 ```
 :::
 
 ### With a custom description
 ::: code-group
 ```yaml [config.yml]
-    - title: Date
-      type: date-and-time
-      description: Current Time in New York!
-      options:
-        format: 'HH:mm'
-        timezone: America/New_York
+- title: Date
+  type: date-and-time
+  description: Current Time in New York!
+  options:
+    format: 'HH:mm'
+    timezone: America/New_York
 ```
 :::

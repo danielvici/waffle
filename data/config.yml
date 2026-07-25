@@ -1,10 +1,12 @@
 title: My Home Page
+background: 'https://images.pexels.com/photos/4826377/pexels-photo-4826377.jpeg'
+theme: bluer
 checkUpdates: false
 services:
   Home:
     - title: Home Assistant
       description: Home automation system
-      link: '#'
+      link: 'https://www.home-assistant.io/'
       icon:
         name: simple-icons:homeassistant
         wrap: true
@@ -19,8 +21,8 @@ services:
     - title: Date
       type: date-and-time
       options:
-        format: 'HH:mm, DD. dddd YYYY' #'HH:mm:ss, MMMM, DD.MM.YYYY'
-        timezone:		America/New_York
+        format: 'HH:mm, DD. dddd YYYY' # 'HH:mm:ss, MMMM, DD.MM.YYYY'
+        timezone: America/New_York
       description: Hallo
 
   Cloud:

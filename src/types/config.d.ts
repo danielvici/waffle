@@ -27,6 +27,7 @@ export interface Config {
   title?: string
   lang?: 'en' | 'ru' | 'zh' | 'hi' | 'es' | 'ar' | 'pl' | 'fr' | 'de' | 'gr'
   theme?: 'system' | 'light' | 'dark' | 'deep' | 'sepia' | 'bluer'
+  background?: string
   layout?: Layout
   behaviour?: Behaviour
   tags: Tag[]
