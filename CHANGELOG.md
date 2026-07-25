@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.4.1
+
+### Bug Fixes
+
+- **server**: add background images server route to explicitly serve background images from `public/backgrounds` and fix 404 errors in docker environment
+
 ## v0.4.0
 
 ### Enhancements
