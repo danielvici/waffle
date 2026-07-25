@@ -36,6 +36,7 @@ services:
       - '3000:3000'
     volumes:
       - ./config.yml:/app/data/config.yml
+      # - ./backgrounds:/app/public/backgrounds # Uncomment if you want to use custom background images.
       # - ./icons:/app/public/icons # Uncomment for custom icons
       # - ./favicons:/app/public/favicons # See docs for favicons
 ```

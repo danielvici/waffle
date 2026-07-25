@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.4.0
+
+### Enhancements
+
+- **Custom Background:** Add a custom background image.
+
+### Chore
+
+- **version:** Bump version to 0.4.0
+
 ## v0.3.0
 
 ### Enhancements

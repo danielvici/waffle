@@ -1,8 +1,13 @@
 <template>
-  <NuxtPwaManifest />
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <div
+    class="min-h-screen bg-cover bg-center bg-no-repeat"
+    :style="background ? { backgroundImage: `url('${background}')` } : {}"
+  >
+    <NuxtPwaManifest />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -13,6 +18,8 @@ const { locale } = useI18n()
 locale.value = $settings.lang
 
 const i18nHead = useLocaleHead({})
+
+const background = $settings.background
 
 useHead({
   title: $settings.title,
@@ -34,23 +41,21 @@ onMounted(() => {
   if (theme !== 'system') {
     const el = document.documentElement
     const themes = ['light', 'dark', 'deep', 'sepia', 'bluer']
-    
     // Force immediate correct state
-    themes.forEach(t => el.classList.remove(t))
+    themes.forEach((t) => el.classList.remove(t))
     el.classList.add(theme)
-    
     // Aggressively prevent nuxt-color-mode or tailwind from ruining the class
     const observer = new MutationObserver(() => {
       if (!el.classList.contains(theme)) {
         el.classList.add(theme)
       }
-      themes.filter(t => t !== theme).forEach(t => {
+      themes.filter((t) => t !== theme).forEach((t) => {
         if (el.classList.contains(t)) {
           el.classList.remove(t)
         }
       })
     })
-    
+
     observer.observe(el, { attributes: true, attributeFilter: ['class'] })
   }
 })

@@ -37,6 +37,20 @@ Values: `system`, `light`, `dark`, `deep`, `sepia`, `bluer`
 
 Default: `system`
 
+## Background
+
+You can set a custom background image. You can provide a direct URL to an image, or use a local image by mounting it into the Docker container or placing it into `/app/public/backgrounds` .
+
+```yaml
+background: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809'
+# Or using a local mounted image:
+# background: '/backgrounds/my-image.jpg'
+```
+
+::: info Info
+If you want to use a local image, make sure you mount the image or the folder it's in.
+:::
+
 ## Check updates
 
 This option is responsible for automatically checking for updates.
