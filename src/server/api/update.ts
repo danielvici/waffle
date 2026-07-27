@@ -2,7 +2,7 @@ import { ofetch } from 'ofetch'
 import { useLogger } from '../utils/logger'
 
 // Current version - update this during releases
-const CURRENT_VERSION = '0.3.0'
+const CURRENT_VERSION = useRuntimeConfig().public.version
 
 export interface ReleasesLatest {
   url: string

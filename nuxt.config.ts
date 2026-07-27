@@ -1,6 +1,12 @@
 import process from 'node:process'
+import pkg from './package.json'
 
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      version: pkg.version,
+    },
+  },
   srcDir: 'src',
   app: {
     head: {

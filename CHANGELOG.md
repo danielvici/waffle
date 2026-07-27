@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.4.2
+
+### Bug Fixes
+
+- **update**: Use runtime config for version and correct release URL
+
+[compare changes](https://github.com/danielvici/waffle/compare/v0.4.1...v0.4.2)
+
 ## v0.4.1
 
 ### Bug Fixes
