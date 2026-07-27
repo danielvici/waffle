@@ -4,7 +4,7 @@
       <div class="w-[160px] h-[160px] -z-1 rounded-full bg-brand-600 blur-3xl right-0 -bottom-20 absolute" />
       <div class="z-1 relative text-end text-fg-dimmed">
         {{ $t('update.message') }} <strong>{{ data.version }}</strong><br>
-        <a :href="`https://github.com/hywax/mafl/releases/tag/v${data.version}`" class="border-b border-dashed" target="_blank">{{ $t('update.visit') }}</a>
+        <a :href="`https://github.com/danielvici/waffle/releases/tag/v${data.version}`" class="border-b border-dashed" target="_blank">{{ $t('update.visit') }}</a>
       </div>
     </div>
   </Teleport>
