@@ -1,4 +1,4 @@
-# Tags <in-version value="0.10.0" />
+# Tags
 
 <preview-image name="reference/tags" />
 

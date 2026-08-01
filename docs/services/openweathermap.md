@@ -1,4 +1,4 @@
-# Open Weather Map  <in-version value="0.9.0" />
+# Open Weather Map
 
 <preview-image name="services/openweathermap" />
 

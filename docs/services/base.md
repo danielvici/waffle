@@ -31,7 +31,7 @@ It is also used to check the [status](#status) availability if no URL has been s
 link: https://home-assistant.home.local/
 ```
 
-## Target <in-version value="0.7.6" />
+## Target
 
 Browser behavior when the service is clicked.
 With this property, you can make the service open in the current or a new window.
@@ -79,7 +79,7 @@ icon:
 See [icons](../reference/icons.md) for details.
 :::
 
-## Tags <in-version value="0.10.0" />
+## Tags
 
 Tags allow you to differentiate between services. It is quite convenient when you have several services that belong to the same project.
 
