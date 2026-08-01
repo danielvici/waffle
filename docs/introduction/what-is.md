@@ -19,8 +19,9 @@ The core concept is simple: **Everything is a Service.**
 A standard card is a [Base Service](/services/base). It holds the essentials like a title, a link, and an icon, but packs a ton of customization options under the hood to fit your exact needs.
 
 Need more than just static links? Waffle comes with built-in dynamic widgets:
-- 🌍 **[IP API](/services/ip-api)** - Display your current public IP address.
-- 🌤️ **[Weather](/services/openweathermap)** - Keep track of the weather at your selected location.
+- **[IP API](/services/ip-api)** - Display your current public IP address.
+- **[Weather](/services/openweathermap)** - Keep track of the weather at your selected location.
+- **[Date & Time](/services/date-and-time.md)** - Display current Date & Time.
 
 Want to build your own? Check out the [Development Guide](/community/development) to create custom services.
 

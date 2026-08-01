@@ -71,7 +71,7 @@ If you want the system to be able to update itself, we recommend using [watchtow
 
 A group of parameters responsible for the behavior of the application.
 
-### Target <in-version value="0.7.6" />
+### Target
 
 Browser behavior when the service is clicked.
 With this property, you can make the service open in the current or a new window.
@@ -96,7 +96,7 @@ Default: `_blank`
 If a field is defined in the service `target` it will be prioritized. More details can be found in the [basic service](../services/base.md#target).
 :::
 
-## Tags <in-version value="0.10.0" />
+## Tags
 
 Tags allow you to differentiate between services.
 
@@ -112,7 +112,7 @@ tags:
 More details can be found in the [tags](../reference/tags.md) section.
 :::
 
-## Layout <in-version value="0.14.0" />
+## Layout
 
 A group of parameters responsible for the application layout.
 

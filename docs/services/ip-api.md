@@ -1,4 +1,4 @@
-# IP API <in-version value="0.8.0" />
+# IP API
 
 <preview-image name="services/ip-api" />
 
