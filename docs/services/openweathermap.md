@@ -59,6 +59,7 @@ services:
 ### Imperial units
 
 ::: code-group
+
 ```yaml [config.yml]
 services:
   - type: openweathermap
@@ -69,4 +70,5 @@ services:
     secrets:
       apiKey: 7ss07b6f7vb3b8329b4ff810c34dfb51
 ```
+
 :::
