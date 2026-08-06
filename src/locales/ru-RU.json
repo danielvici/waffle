@@ -1,8 +1,5 @@
 {
-  "service": {
-
-  },
-
+  "service": {},
   "error": {
     "title": "Ошибка",
     "page404": "Страница не найдена!",
@@ -10,9 +7,19 @@
     "description": "Упс! Произошла непредвиденная ошибка",
     "action": "Перейти к документации"
   },
-
   "update": {
     "message": "Доступна новая версия",
     "visit": "Перейти в github →"
+  },
+  "commandPalette": {
+    "title": "Command palette",
+    "placeholder": "Search services...",
+    "empty": "No matching services",
+    "hints": {
+      "navigate": "to navigate",
+      "open": "to open",
+      "close": "to close"
+    },
+    "searchWeb": "Search the web with"
   }
 }

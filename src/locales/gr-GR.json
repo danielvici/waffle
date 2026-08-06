@@ -1,8 +1,5 @@
 {
-  "service": {
-
-  },
-
+  "service": {},
   "error": {
     "title": "Σφάλμα",
     "page404": "Η σελίδα δεν βρέθηκε!",
@@ -10,9 +7,19 @@
     "description": "Ουπς! Παρουσιάστηκε ένα απρόοπτο σφάλμα.",
     "action": "Οδηγίες Χρήσης"
   },
-
   "update": {
     "message": "Υπάρχει μία καινούρια έκδοση!",
     "visit": "Δείτε στο GitHub →"
+  },
+  "commandPalette": {
+    "title": "Command palette",
+    "placeholder": "Search services...",
+    "empty": "No matching services",
+    "hints": {
+      "navigate": "to navigate",
+      "open": "to open",
+      "close": "to close"
+    },
+    "searchWeb": "Search the web with"
   }
 }

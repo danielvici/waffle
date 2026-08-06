@@ -1,8 +1,5 @@
 {
-  "service": {
-
-  },
-
+  "service": {},
   "error": {
     "title": "خطأ",
     "page404": "الصفحة غير متوفرة",
@@ -10,9 +7,19 @@
     "description": "عفوا!! يبدو ان هنالك خطأ",
     "action": "قراءة التعليمات"
   },
-
   "update": {
     "message": "يوجد تحديث جديد",
     "visit": "قم بزيارتنا على جيتهب →"
+  },
+  "commandPalette": {
+    "title": "Command palette",
+    "placeholder": "Search services...",
+    "empty": "No matching services",
+    "hints": {
+      "navigate": "to navigate",
+      "open": "to open",
+      "close": "to close"
+    },
+    "searchWeb": "Search the web with"
   }
 }

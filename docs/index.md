@@ -50,4 +50,7 @@ features:
   - title: PWA
     icon: 📲
     details: Installable application.
+  - title: Command Palette
+    icon: ⌨️
+    details: Find and open any service with Ctrl/⌘+K.
 ---

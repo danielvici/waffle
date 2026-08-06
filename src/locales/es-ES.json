@@ -1,8 +1,5 @@
 {
-  "service": {
-
-  },
-
+  "service": {},
   "error": {
     "title": "Error",
     "page404": "Página no encontrada!",
@@ -10,9 +7,19 @@
     "description": "¡Uy! Se ha producido un error inesperado",
     "action": "Ir a la documentación"
   },
-
   "update": {
     "message": "Ya está disponible una nueva versión",
     "visit": "Visitar en github →"
+  },
+  "commandPalette": {
+    "title": "Command palette",
+    "placeholder": "Search services...",
+    "empty": "No matching services",
+    "hints": {
+      "navigate": "to navigate",
+      "open": "to open",
+      "close": "to close"
+    },
+    "searchWeb": "Search the web with"
   }
 }

@@ -14,5 +14,17 @@
   "update": {
     "message": "Eine neue Version ist verfügbar",
     "visit": "Besuch uns auf Github →"
+  },
+
+  "commandPalette": {
+    "title": "Befehlspalette",
+    "placeholder": "Services durchsuchen...",
+    "empty": "Keine passenden Services",
+    "searchWeb": "Im Web suchen mit",
+    "hints": {
+      "navigate": "zum Navigieren",
+      "open": "zum Öffnen",
+      "close": "zum Schließen"
+    }
   }
 }

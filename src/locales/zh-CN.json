@@ -1,8 +1,5 @@
 {
-  "service": {
-
-  },
-
+  "service": {},
   "error": {
     "title": "谬误",
     "page404": "页面未找到!",
@@ -10,9 +7,19 @@
     "description": "哎呀！出现意外错误",
     "action": "转到文档"
   },
-
   "update": {
     "message": "新版本问世",
     "visit": "访问 github →"
+  },
+  "commandPalette": {
+    "title": "Command palette",
+    "placeholder": "Search services...",
+    "empty": "No matching services",
+    "hints": {
+      "navigate": "to navigate",
+      "open": "to open",
+      "close": "to close"
+    },
+    "searchWeb": "Search the web with"
   }
 }

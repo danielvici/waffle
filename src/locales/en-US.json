@@ -14,5 +14,17 @@
   "update": {
     "message": "A new version is available",
     "visit": "Visit on github →"
+  },
+
+  "commandPalette": {
+    "title": "Command palette",
+    "placeholder": "Search services...",
+    "empty": "No matching services",
+    "searchWeb": "Search the web with",
+    "hints": {
+      "navigate": "to navigate",
+      "open": "to open",
+      "close": "to close"
+    }
   }
 }

@@ -4,6 +4,7 @@
     :key="key"
     v-bind="{ ...group, grid: $settings.layout.grid }"
   />
+  <CommandPalette />
   <Update v-if="$settings.checkUpdates" />
 </template>
 
