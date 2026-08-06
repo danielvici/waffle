@@ -1,0 +1,84 @@
+name: Release (changelog + tag)
+
+# Manual release trigger. Runs the same steps as `bun run release`
+# locally: quality gates, then changelogen to bump the version, update
+# CHANGELOG.md, create a git tag and push everything back to main.
+#
+# The tag push then triggers .github/workflows/release.yml which builds
+# and publishes the Docker image.
+#
+# Cross-workflow trigger requirement:
+# Pushes made with the default GITHUB_TOKEN do NOT trigger other
+# workflows. To let the tag push start the Docker release workflow,
+# store a Personal Access Token (with `repo` + `workflow` scope) as
+# repository secret `RELEASE_TOKEN`. If the secret is missing the
+# workflow still bumps and tags, but you must manually re-run
+# release.yml or push the tag from a local checkout.
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: 'Version bump (leave empty for automatic detection from conventional commits)'
+        required: false
+        type: choice
+        default: ''
+        options:
+          - ''
+          - patch
+          - minor
+          - major
+      dry-run:
+        description: 'Preview the changelog and version bump without pushing'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Bump version and update changelog
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.RELEASE_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: ESLint
+        run: bun run lint
+
+      - name: Types
+        run: bun run typecheck
+
+      - name: Build
+        run: bun run build
+
+      - name: Configure git identity
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - name: Preview release (dry run)
+        if: ${{ inputs.dry-run }}
+        run: bunx changelogen ${{ inputs.bump && format('--{0}', inputs.bump) || '' }}
+
+      - name: Release
+        if: ${{ !inputs.dry-run }}
+        run: bunx changelogen --release --push ${{ inputs.bump && format('--{0}', inputs.bump) || '' }}
