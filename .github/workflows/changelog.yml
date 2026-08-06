@@ -76,9 +76,9 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
       - name: Preview release (dry run)
-        if: ${{ inputs.dry-run }}
+        if: ${{ inputs.dry-run == true }}
         run: bunx changelogen ${{ inputs.bump && format('--{0}', inputs.bump) || '' }}
 
       - name: Release
-        if: ${{ !inputs.dry-run }}
+        if: ${{ inputs.dry-run != true }}
         run: bunx changelogen --release --push ${{ inputs.bump && format('--{0}', inputs.bump) || '' }}
