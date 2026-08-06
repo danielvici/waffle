@@ -40,5 +40,17 @@ jobs:
     name: CI Status
     runs-on: ubuntu-latest
     needs: build
+    if: always()
     steps:
-      - run: echo "All good. Build is green."
+      - name: Verify build result
+        run: |
+          case "${{ needs.build.result }}" in
+            success|skipped)
+              echo "CI passed (build: ${{ needs.build.result }})"
+              exit 0
+              ;;
+            *)
+              echo "CI failed (build: ${{ needs.build.result }})"
+              exit 1
+              ;;
+          esac
