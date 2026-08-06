@@ -35,6 +35,7 @@ export default defineConfig({
         base: '/reference',
         items: [
           { text: 'Configuration', link: '/configuration' },
+          { text: 'Command Palette', link: '/command-palette' },
           { text: 'Icons', link: '/icons' },
           { text: 'Tags', link: '/tags' },
           { text: 'Favicons', link: '/favicons' },
