@@ -2,6 +2,8 @@
 
 The command palette is a keyboard-driven overlay that lets you quickly find and open any service on your dashboard without touching the mouse. It is especially useful once you have many services grouped across several sections.
 
+<preview-image name="reference/command-palette" :dark-mode-change="false" />
+
 ## Opening the palette
 
 Press <kbd>Ctrl</kbd> + <kbd>K</kbd> on Windows/Linux or <kbd>⌘</kbd> + <kbd>K</kbd> on macOS from anywhere on the dashboard to toggle the palette.
