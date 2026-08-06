@@ -6,10 +6,18 @@
 import { computed } from 'vue'
 import { useData, withBase } from 'vitepress'
 
-const props = defineProps<{ name: string }>()
-
+const props = withDefaults(
+  defineProps<{ name: string, darkModeChange?: boolean }>(),
+  { darkModeChange: true }
+)
 const { isDark } = useData()
-const image = computed(() => withBase(`/${props.name}${isDark.value ? '-dark' : ''}.png`))
+const image = computed(() => {
+  if (props.darkModeChange){
+    return withBase(`/${props.name}${isDark.value ? '-dark' : ''}.png`)
+  } else {
+    return  withBase(`/${props.name}.png`)
+  }
+})
 </script>
 
 <style scoped>
