@@ -1,8 +1,5 @@
 {
-  "service": {
-
-  },
-
+  "service": {},
   "error": {
     "title": "Fout",
     "page404": "Pagina niet gevonden!",
@@ -10,9 +7,19 @@
     "description": "Oeps! Er was een onverwachte fout",
     "action": "Ga naar de documentatie"
   },
-
   "update": {
     "message": "Een nieuwe versie is beschikbaar",
     "visit": "Bekijk op Github →"
+  },
+  "commandPalette": {
+    "title": "Command palette",
+    "placeholder": "Search services...",
+    "empty": "No matching services",
+    "hints": {
+      "navigate": "to navigate",
+      "open": "to open",
+      "close": "to close"
+    },
+    "searchWeb": "Search the web with"
   }
 }
