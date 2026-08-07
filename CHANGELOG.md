@@ -1,8 +1,24 @@
 # Changelog
 
-## v0.4.3
+## v0.5.0
 
-[compare changes](https://github.com/danielvici/waffle/compare/v0.5.0...v0.4.3)
+### Enhancements
+
+- **command-palette:** Add a searchable command palette on `Ctrl`/`⌘`+`K` ([9b7d620](https://github.com/danielvici/waffle/commit/9b7d620))
+
+### Bug Fixes
+
+- **ci:** Correct the dry-run boolean check in the release workflow, which made every dispatch behave as a preview and never push a tag ([afbfd8b](https://github.com/danielvici/waffle/commit/afbfd8b))
+
+### Chore
+
+- **config:** Drop the default remote background image ([647b40b](https://github.com/danielvici/waffle/commit/647b40b))
+- **docs:** Document the command palette, add preview screenshots and `darkModeChange` support ([ae6bc09](https://github.com/danielvici/waffle/commit/ae6bc09), [9099e3e](https://github.com/danielvici/waffle/commit/9099e3e))
+- **docs:** Remove Yandex Metrika tracking ([c71d2f7](https://github.com/danielvici/waffle/commit/c71d2f7))
+- **docs:** Add the date and time service to "What is Waffle" and remove the `<in-version>` tags ([668f7cd](https://github.com/danielvici/waffle/commit/668f7cd), [b6445c5](https://github.com/danielvici/waffle/commit/b6445c5))
+- **ci:** Add the manual release workflow and make the status check robust against skipped jobs ([cb2aa1f](https://github.com/danielvici/waffle/commit/cb2aa1f), [55ccab1](https://github.com/danielvici/waffle/commit/55ccab1))
+
+[compare changes](https://github.com/danielvici/waffle/compare/v0.4.2...v0.5.0)
 
 ## v0.4.2
 
