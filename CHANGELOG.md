@@ -1,5 +1,30 @@
 # Changelog
 
+## v0.6.0
+
+[compare changes](https://github.com/danielvici/waffle/compare/v0.5.0...v0.6.0)
+
+### 🩹 Fixes
+
+- **i18n:** Let config.yml own the language and restore missing fallback ([69cd8f6](https://github.com/danielvici/waffle/commit/69cd8f6))
+
+### 📦 Build
+
+- **docker:** Install from the lockfile and build the image in CI ([517680c](https://github.com/danielvici/waffle/commit/517680c))
+- **docker:** Drop the locale assertion from the image build ([450b59e](https://github.com/danielvici/waffle/commit/450b59e))
+
+### 🏡 Chore
+
+- **release:** V0.4.3 ([d957dbe](https://github.com/danielvici/waffle/commit/d957dbe))
+
+### 🤖 CI
+
+- Rework CI gating and make releases fail loudly ([73dea3a](https://github.com/danielvici/waffle/commit/73dea3a))
+
+### ❤️ Contributors
+
+- Danielvici123 ([@danielvici](http://github.com/danielvici))
+
 ## v0.5.0
 
 ### Enhancements
