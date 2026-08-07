@@ -2,5 +2,8 @@ node_modules
 .output
 .nuxt
 README.md
-bun.lock
-bun.lockb
+
+# bun.lock is deliberately NOT ignored: the image build must install the
+# exact same dependency versions as local development, otherwise a build
+# silently picks up newer minors of nuxt / @nuxtjs/i18n and behaves
+# differently in production than anywhere else.

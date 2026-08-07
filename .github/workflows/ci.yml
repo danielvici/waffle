@@ -101,21 +101,47 @@ jobs:
       - name: Build docs
         run: bun run docs:build
 
+  docker:
+    name: Docker Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: changes
+    if: ${{ github.event_name == 'push' || needs.changes.outputs.code == 'true' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # Build without pushing. release.yml only fires on tag push, so
+      # without this a broken Dockerfile is discovered after the tag is
+      # already published.
+      - name: Build image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          platforms: linux/amd64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
   status-check:
     name: CI Status
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    needs: [changes, build, docs]
+    needs: [changes, build, docs, docker]
     # Must ALWAYS run, otherwise the required check never reports back.
     if: always()
     steps:
       - name: Verify job results
         env:
-          RESULTS: ${{ needs.changes.result }} ${{ needs.build.result }} ${{ needs.docs.result }}
+          RESULTS: ${{ needs.changes.result }} ${{ needs.build.result }} ${{ needs.docs.result }} ${{ needs.docker.result }}
         run: |
           echo "changes: ${{ needs.changes.result }}"
           echo "build:   ${{ needs.build.result }}"
           echo "docs:    ${{ needs.docs.result }}"
+          echo "docker:  ${{ needs.docker.result }}"
           failed=0
           for result in $RESULTS; do
             case "$result" in
