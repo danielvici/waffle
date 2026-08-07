@@ -145,6 +145,12 @@ export default defineNuxtConfig({
     restructureDir: 'src',
     langDir: 'locales',
     defaultLocale: 'en',
+    // The language is owned by `lang` in config.yml and applied in app.vue.
+    // Browser detection defaults to on and persists its choice in the
+    // i18n_redirected cookie, which then overrides the configured language
+    // after hydration - the page renders German on the server and flips to
+    // English in the browser.
+    detectBrowserLanguage: false,
   },
   tailwindcss: {
     cssPath: '~/assets/style/tailwind.css',
