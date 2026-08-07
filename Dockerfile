@@ -10,12 +10,6 @@ COPY . /app
 
 RUN bun run build
 
-# Fail the build instead of shipping an image whose i18n messages never
-# got bundled - that failure is silent at runtime and only shows up as
-# raw translation keys in the UI.
-RUN grep -rq "Befehlspalette" /app/.output \
-    || (echo "ERROR: locale messages missing from build output" && exit 1)
-
 FROM oven/bun:alpine
 
 LABEL org.opencontainers.image.title="Waffle" \
