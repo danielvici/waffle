@@ -59,10 +59,12 @@ jobs:
           bun-version: latest
 
       - name: Install dependencies
-        run: bun install
+        run: bun install --frozen-lockfile
 
       - name: ESLint
-        run: bun run lint
+        # No --fix: this job commits, so autofixes would silently end up
+        # in the release commit.
+        run: bun run lint:ci
 
       - name: Types
         run: bun run typecheck
@@ -75,10 +77,31 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
+      - name: Verify release token
+        if: ${{ inputs.dry-run != true }}
+        env:
+          RELEASE_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        run: |
+          if [ -z "$RELEASE_TOKEN" ]; then
+            echo "::error::RELEASE_TOKEN secret is missing. The default"
+            echo "::error::GITHUB_TOKEN cannot push to main because the"
+            echo "::error::'before-push-main' ruleset requires the 'CI Status'"
+            echo "::error::check, which a direct push never provides."
+            exit 1
+          fi
+
       - name: Preview release (dry run)
         if: ${{ inputs.dry-run == true }}
         run: bunx changelogen ${{ inputs.bump && format('--{0}', inputs.bump) || '' }}
 
+      # Deliberately NOT `changelogen --push`: changelogen swallows a failing
+      # `git push` and still exits 0, which once produced a green run that had
+      # published a tag but never landed the release commit. Pushing in a
+      # separate step makes the failure fatal.
       - name: Release
         if: ${{ inputs.dry-run != true }}
-        run: bunx changelogen --release --push ${{ inputs.bump && format('--{0}', inputs.bump) || '' }}
+        run: bunx changelogen --release ${{ inputs.bump && format('--{0}', inputs.bump) || '' }}
+
+      - name: Push commit and tag
+        if: ${{ inputs.dry-run != true }}
+        run: git push --follow-tags origin HEAD:main

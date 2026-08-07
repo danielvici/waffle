@@ -4,17 +4,28 @@ on:
   push:
     tags:
       - 'v*.*.*'
+  # Lets you (re)build the image for a tag that already exists, e.g. when a
+  # tag was created by hand and never triggered the push event.
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing tag to build, e.g. v0.5.0'
+        required: true
+        type: string
 
 jobs:
   push_to_registries:
     name: Push Docker image to GHCR
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     permissions:
       packages: write
       contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag || github.ref_name }}
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -28,18 +39,23 @@ jobs:
 
       - name: Extract Docker tags
         id: meta
+        shell: bash
+        env:
+          VERSION_TAG: ${{ inputs.tag || github.ref_name }}
+          OWNER: ${{ github.repository_owner }}
         run: |
-          version_tag="${{github.ref_name}}"
-          CLEAN_TAG=$(echo $version_tag | sed 's/^v//')
-          
-          TAGS="ghcr.io/${{ github.repository_owner }}/waffle:${CLEAN_TAG}"
-          
-          if [[ "$version_tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-            TAGS="${TAGS},ghcr.io/${{ github.repository_owner }}/waffle:latest"
-            TAGS="${TAGS},ghcr.io/${{ github.repository_owner }}/waffle:$(echo $CLEAN_TAG | cut -d. -f1)"
+          clean_tag="${VERSION_TAG#v}"
+          tags="ghcr.io/${OWNER}/waffle:${clean_tag}"
+
+          # Only plain releases move :latest and the major alias; pre-release
+          # tags such as v1.2.3-rc.1 publish under their exact version only.
+          if [[ "$VERSION_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            tags="${tags},ghcr.io/${OWNER}/waffle:latest"
+            tags="${tags},ghcr.io/${OWNER}/waffle:${clean_tag%%.*}"
           fi
-          
-          echo "tags=${TAGS}" >> "$GITHUB_OUTPUT"
+
+          echo "tags=${tags}" >> "$GITHUB_OUTPUT"
+          echo "Publishing: ${tags}"
 
       - name: Build and push Docker images
         uses: docker/build-push-action@v6
