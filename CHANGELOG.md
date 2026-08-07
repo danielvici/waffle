@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.4.3
+
+[compare changes](https://github.com/danielvici/waffle/compare/v0.5.0...v0.4.3)
+
 ## v0.4.2
 
 ### Bug Fixes
